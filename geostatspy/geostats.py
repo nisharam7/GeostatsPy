@@ -393,12 +393,19 @@ def setup_rotmat2(c0,nst,it,cc,ang):
 def setup_rotmat(c0, nst, it, cc, ang, pmx):
     """Setup rotation matrix.
     :param c0: nugget constant (isotropic)
+    :type c0: float
     :param nst: number of nested structures (max. 4)
-    :param it: TODO
+    :type nst: float
+    :param it: each nested structure, vector
+    :type it: array
     :param cc: multiplicative factor of each nested structure
-    :param ang: TODO
-    :param pmx: TODO
-    :return: TODO
+    :type cc: float
+    :param ang: angle by which to rotate matrix counterclockwise
+    :type ang: float
+    :param pmx: constant multiplicative factor
+    :type pmx: float
+    :return: rotated matrix
+    :type return: numpy array, float 
     """
     PI = 3.141_592_65
     DTOR = PI / 180.0
